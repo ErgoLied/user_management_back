@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "2702a0b6-549c-4b4b-8e35-554560ba1122",
+		"name": "user_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "http://localhost:3000",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{app_host}}/users",
+					"host": [
+						"{{app_host}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{app_host}}/users/61971bcfb6538c19aea761a5",
+					"host": [
+						"{{app_host}}"
+					],
+					"path": [
+						"users",
+						"61971bcfb6538c19aea761a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{app_host}}/users/6171b1ce3e588e99bc45c1e7",
+					"host": [
+						"{{app_host}}"
+					],
+					"path": [
+						"users",
+						"6171b1ce3e588e99bc45c1e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ewdrger5ty\",\r\n    \"first_name\": \"wewerwer\",\r\n    \"last_name\": \"ertert\",\r\n    \"email\": \"ewdrger5ty@com.ua\",\r\n    \"user_type\": \"Driver\",\r\n    \"password\": \"Qwerty123*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{app_host}}/users",
+					"host": [
+						"{{app_host}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ewdrger5ty\",\r\n    \"first_name\": \"wewerwer\",\r\n    \"last_name\": \"ertert\",\r\n    \"email\": \"ewdrger5ty@com.ua\",\r\n    \"user_type\": \"Driver\",\r\n    \"password\": \"Qwerty123*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{app_host}}/users/61971bcfb6538c19aea761a5",
+					"host": [
+						"{{app_host}}"
+					],
+					"path": [
+						"users",
+						"61971bcfb6538c19aea761a5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
